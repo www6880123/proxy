@@ -17,9 +17,13 @@ public class AccountController {
 
     @PostMapping("/login")
     public ModelAndView login(@PathVariable("username") String username,@PathVariable("password") String password){
-        Account account = null;
         ModelAndView modelAndView = new ModelAndView();
-        accountService.loginAccount(username,password);
+        Account account = accountService.loginAccount(username,password);
+        if(account==null){
+
+        }else{
+
+        }
         return modelAndView;
     }
 
