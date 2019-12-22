@@ -1,5 +1,6 @@
 package com.hj.proxy.frontdesk.controller;
 
+import com.hj.proxy.frontdesk.entity.Account;
 import com.hj.proxy.frontdesk.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ public class AccountController {
 
     @PostMapping("/login")
     public ModelAndView login(@PathVariable("username") String username,@PathVariable("password") String password){
+        Account account = null;
         ModelAndView modelAndView = new ModelAndView();
         accountService.loginAccount(username,password);
         return modelAndView;

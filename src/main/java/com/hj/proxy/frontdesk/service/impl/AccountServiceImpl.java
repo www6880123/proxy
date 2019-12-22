@@ -4,7 +4,9 @@ import com.hj.proxy.frontdesk.dao.AccountDao;
 import com.hj.proxy.frontdesk.entity.Account;
 import com.hj.proxy.frontdesk.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AccountServiceImpl implements AccountService {
 
     @Autowired
